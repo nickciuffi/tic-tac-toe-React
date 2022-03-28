@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Board from "./Board";
+import './app.css'
+import React, { useState, useEffect } from 'react'
 
 function App() {
+
+  const [boardPlays, setBoardPlays] = useState([{Value:'', key:'1'}, {Value:'X', key:'2'}, {Value:'O', key:'3'}, {Value:'', key:'4'}, {Value:'', key:'5'}, {Value:'', key:'6'}, {Value:'O', key:'7'}, {Value:'', key:'8'}, {Value:'O', key:'9'}])
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <h1>Tic Tac Toe</h1>
+    <div className="container">
+      <Board boardPlays={boardPlays}/>
     </div>
+    </>
   );
 }
 
