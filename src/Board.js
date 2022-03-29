@@ -1,12 +1,14 @@
 import React from 'react'
 import Square from './Square'
 
-export default function Board({boardPlays}) {
+export default function Board({boardPlays, changePlays}) {
+
+    
     
     return(
     boardPlays.map(play =>{
-    
-       return <Square value={play.Value} key={play.key} />
+       
+       return <Square changePlays={changePlays} play={play} key={play.key} />
      })
     )
   

@@ -1,8 +1,13 @@
 import React from 'react'
 
-export default function Square({value}) {
+export default function Square({play, changePlays}) {
+
+    function handleClick(){
+       
+      changePlays(play.key)
+    }
    
   return (
-    <div className='square'>{value != " " ? value : ""}</div>
+    <div onClick={handleClick} className='square'>{play.value}</div>
   )
 }
